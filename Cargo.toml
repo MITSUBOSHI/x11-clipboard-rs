@@ -2,7 +2,15 @@
 name = "x11-clipboard-rs"
 version = "0.1.0"
 edition = "2021"
+authors = ["MITSUBOSHI <yuya.mitsuboshi@gmail.com>"]
+description = "X11 cliboard copy and paste command line tool"
+keywords = ["x11", "clipboard", "copy", "paste"]
+license = "MIT"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+path = "src/main.rs"
+name = "cb"
 
 [dependencies]
+clap = { version = "*", features = ["derive"] }
+thiserror = { version = "*" }

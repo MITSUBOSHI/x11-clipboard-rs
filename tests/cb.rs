@@ -35,7 +35,7 @@ fn cb_copy_and_paste() {
     cmd.arg("copy")
         .write_stdin(stdin_data)
         .output()
-        .expect("failed to execute cb copy from argument");
+        .expect("failed to execute cb copy from stdin");
 
     let mut cmd = Command::cargo_bin("cb").unwrap();
     cmd.arg("paste").assert().success().stdout(stdin_data);

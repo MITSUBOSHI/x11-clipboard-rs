@@ -6,6 +6,13 @@ authors = ["MITSUBOSHI <yuya.mitsuboshi@gmail.com>"]
 description = "X11 cliboard copy and paste command line tool"
 keywords = ["x11", "clipboard", "copy", "paste"]
 license = "MIT"
+documentation = "https://docs.rs/x11-clipboard-rs/"
+homepage = "https://crates.io/crates/x11-clipboard-rs"
+repository = "https://github.com/MITSUBOSHI/x11-clipboard-rs"
+readme = "README.md"
+
+[badges]
+maintenance = { status = "actively-developed" }
 
 [[bin]]
 path = "src/main.rs"

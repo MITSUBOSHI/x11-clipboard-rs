@@ -28,6 +28,6 @@ jobs:
         with:
           toolchain: ${{ matrix.rust }}
       - name: Install dependency
-        run: apt-get install -y xsel
+        run: sudo apt-get update && sudo apt-get install -y xsel
       - name: Run test
         run: cargo test

@@ -28,6 +28,6 @@ jobs:
         with:
           toolchain: ${{ matrix.rust }}
       - name: Install dependency
-        run: sudo apt-get update && sudo apt-get install -y xsel
+        run: sudo apt-get update && sudo apt-get install -y xvfb xsel
       - name: Run test
-        run: cargo test -- --test-threads=1 # FIXME
+        run: RUST_BACKTRACE=1 xvfb-run cargo test -- --test-threads=1 --test cb # FIXME

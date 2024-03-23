@@ -40,7 +40,7 @@ cb copy "Hello, new user to cb"
 Paste data from X11 clipboard to STDOUT.
 
 ```sh
-cp paste > /tmp/dump.txt
+cb paste > /tmp/dump.txt
 ```
 
 ## License

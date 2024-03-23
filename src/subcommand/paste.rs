@@ -4,7 +4,7 @@ use std::process::Command;
 
 pub fn run() -> Result<(), Error> {
     let output = Command::new("xsel")
-        .args(&["--clipboard", "--output"])
+        .args(["--clipboard", "--output"])
         .output();
 
     match output {

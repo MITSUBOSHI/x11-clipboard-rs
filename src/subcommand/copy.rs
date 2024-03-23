@@ -8,7 +8,7 @@ pub fn run(data: Data) -> Result<(), Error> {
     let data_string = data.to_string();
     let data = data_string.as_bytes();
     let mut child = Command::new("xsel")
-        .args(&["--clipboard", "--input"])
+        .args(["--clipboard", "--input"])
         .stdin(Stdio::piped())
         .stdout(Stdio::null())
         .spawn()?;

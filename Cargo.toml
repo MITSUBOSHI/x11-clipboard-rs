@@ -1,6 +1,6 @@
 [package]
 name = "x11-clipboard-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["MITSUBOSHI <yuya.mitsuboshi@gmail.com>"]
 description = "X11 cliboard copy and paste command line tool"

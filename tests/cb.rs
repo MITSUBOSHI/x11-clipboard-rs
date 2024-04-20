@@ -18,7 +18,7 @@ fn cb_copy_and_paste() {
     // Input from argument
     let mut cmd = Command::cargo_bin("cb").unwrap();
 
-    let argument_data = "I'm from argument.";
+    let argument_data = "Hello, world!\nI'm from argument.";
 
     cmd.args(["copy", argument_data])
         .output()
@@ -30,7 +30,7 @@ fn cb_copy_and_paste() {
     // Input from stdin
     let mut cmd = Command::cargo_bin("cb").unwrap();
 
-    let stdin_data = "I'm from stdin.";
+    let stdin_data = "Hello, world!\nI'm from stdin.";
 
     cmd.arg("copy")
         .write_stdin(stdin_data)

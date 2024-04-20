@@ -50,9 +50,15 @@ impl FromStr for Data {
                 }
                 STDIN_ALREADY_USED.store(true, std::sync::atomic::Ordering::SeqCst);
                 let mut buffer = String::new();
-                io::stdin()
-                    .read_line(&mut buffer)
-                    .map_err(Error::StdFailed)?;
+                let stdin = io::stdin();
+
+                for line in stdin.lines() {
+                    match line {
+                        Ok(line) => buffer.push_str(&format!("{}\n", line)),
+                        Err(error) => return Err(Error::StdFailed(error)),
+                    }
+                }
+
                 Ok(Self::Stdin(buffer.trim().to_string()))
             }
             arg => Ok(Self::Argument(arg.to_owned())),
